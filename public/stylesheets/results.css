@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Lucida Console';
+  src: url('../fonts/Lucida-Console.ttf') format('truetype');
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Console", Helvetica, Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
