@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var rateTweets = require('./routes/rate-tweets');
 var results = require('./routes/results');
+var preRateTweets = require('./routes/pre-rate-tweets');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', index);
 app.use('/rate-tweets', rateTweets);
+app.use('/pre-rate-tweets', preRateTweets);
 app.use('/results', results);
 
 // Error Handling
@@ -40,6 +42,10 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
   res.render('error', { title: 'Not Found', message: 'Not Found', status: '404' });
+});
+
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
 });
 
 module.exports = app;

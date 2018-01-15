@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/pre-rate-tweets.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<form action="pre-rate-tweets/insert" method="post">
+    <input name="age" type="number" min="10" max="100" placeholder="age">Age<br>
+    <input id="formgender" type="radio" name="gender" value="male">Male<br>
+    <input id="formgender" type="radio" name="gender" value="female"> Female<br>
+    <input id="formgender" type="radio" name="gender" value="other"> Other<br>
+    <input name="work" type="text" placeholder="occupation">Occupation<br>
+    <input name="ethics" type="range" min="0" max="5">Ethical knowledge<br>
+    <input type="submit" value="Submit">
+</form>
+<h3>Get Data</h3>
+<a href="pre-rate-tweets/get-data">LOAD DATA</a>
+</body>
+</html>
