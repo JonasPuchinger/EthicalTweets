@@ -1,1 +1,13 @@
 # EthicalTweets
+Dictionary Categorys
+01                    HarmVirtue
+02                    HarmVice
+03                    FairnessVirtue
+04                    FairnessVice
+05                    IngroupVirtue
+06                    IngroupVice
+07                    AuthorityVirtue
+08                    AuthorityVice
+09                    PurityVirtue
+10                    PurityVice
+11                    MoralityGeneral
