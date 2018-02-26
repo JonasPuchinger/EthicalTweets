@@ -1,13 +1,13 @@
 # EthicalTweets
 Dictionary Categorys
-01                    HarmVirtue
-02                    HarmVice
-03                    FairnessVirtue
-04                    FairnessVice
-05                    IngroupVirtue
-06                    IngroupVice
-07                    AuthorityVirtue
-08                    AuthorityVice
-09                    PurityVirtue
-10                    PurityVice
-11                    MoralityGeneral
+01                    HarmVirtue = Schutz
+02                    HarmVice = Schaden
+03                    FairnessVirtue = Gerechtigkeit
+04                    FairnessVice = Ungerechtigkeit
+05                    IngroupVirtue = Zugehörigkeit
+06                    IngroupVice = Ausgrenzung
+07                    AuthorityVirtue = Gehprsamkeit  
+08                    AuthorityVice = Protest
+09                    PurityVirtue = Tugendhaftigkeit
+10                    PurityVice = Verdorbenheit
+11                    MoralityGeneral = Moral Allgemein
