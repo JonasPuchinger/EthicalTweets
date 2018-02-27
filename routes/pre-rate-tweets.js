@@ -2,14 +2,20 @@
  * Created by simon on 13.01.2018.
  */
 var express = require('express');
+
 var router = express.Router();
 var mongo = require('mongodb').MongoClient;
 var assert = require('assert');
+var shortid = require('shortid');
 
 var url = 'mongodb://infophil:ethtweets8897@ethicaltweets-shard-00-00-nzg80.mongodb.net:27017,ethicaltweets-shard-00-01-nzg80.mongodb.net:27017,ethicaltweets-shard-00-02-nzg80.mongodb.net:27017/test?ssl=true&replicaSet=ethicaltweets-shard-0&authSource=admin';
 
+var userId = shortid.generate();
+
 router.get('/', function(req, res, next) {
+    res.cookie('uid',userId);
     res.render('pre-rate-tweets', { title: 'Ethical Tweets' });
+
 });
 
 router.get('/get-data', function(req, res, next) {
@@ -30,7 +36,9 @@ router.get('/get-data', function(req, res, next) {
 });
 
 router.post('/insert', function(req, res, next){
+
     var item = {
+        userid: userId,
         age: req.body.age,
         gender: req.body.gender,
         work: req.body.work,
@@ -49,4 +57,6 @@ router.post('/insert', function(req, res, next){
     res.redirect('/rate-tweets');
 });
 
+
 module.exports = router;
+

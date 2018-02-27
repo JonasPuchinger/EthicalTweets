@@ -5,6 +5,31 @@
     <link rel='stylesheet' href='/stylesheets/rate-tweets.css' />
   </head>
   <body>
+  <img src='/images/logo.svg' alt='Logo' id='index-logo'>
     <h1><%= title %></h1>
+    <a href="rate-tweets/get-tweet"><%= starthtml %></a>
+    <p id="handle">@<%= namehtml %> schrieb am <%= datehtml %>:</p>
+    <p id="content"><%= contenthtml %></p>
+    <form action="rate-tweets/insert" method="post">
+      <span style="background-color:lightgreen">
+      <input id="kategorie" type="radio" name="kategorie" value="1" required="required">Schutz
+      <input id="kategorie" type="radio" name="kategorie" value="3" required="required">Gerechtigkeit
+      <input id="kategorie" type="radio" name="kategorie" value="5" required="required">Zugehörigkeit
+      <input id="kategorie" type="radio" name="kategorie" value="7" required="required">Gehorsamkeit
+        <input id="kategorie" type="radio" name="kategorie" value="9" required="required">Tugendhaftigkeit<br><br>
+      </span><span style="background-color:lightcoral">
+        <input id="kategorie" type="radio" name="kategorie" value="2" required="required">Schaden
+      <input id="kategorie" type="radio" name="kategorie" value="4" required="required">Ungerechtigkeit
+      <input id="kategorie" type="radio" name="kategorie" value="6" required="required">Ausgrenzung
+      <input id="kategorie" type="radio" name="kategorie" value="8" required="required">Protest
+        <input id="kategorie" type="radio" name="kategorie" value="10" required="required">Verdorbenheit<br><br>
+        </span>
+      <span style="background-color:lightgray">
+        <input id="kategorie" type="radio" name="kategorie" value="11" required="required">Ethik allgemein<br><br>
+        </span>
+        <center>
+      <input type="submit" class='index-link-btn' value="Submit">
+      </center>
+    </form>
   </body>
 </html>
