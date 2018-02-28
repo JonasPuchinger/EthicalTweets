@@ -10,6 +10,7 @@
     <a href="rate-tweets/get-tweet"><%= starthtml %></a>
     <p id="handle">@<%= namehtml %> schrieb am <%= datehtml %>:</p>
     <p id="content"><%= contenthtml %></p>
+  <center>
     <form action="rate-tweets/insert" method="post">
       <span style="background-color:lightgreen">
       <input id="kategorie" type="radio" name="kategorie" value="1" required="required">Schutz
@@ -27,7 +28,6 @@
       <span style="background-color:lightgray">
         <input id="kategorie" type="radio" name="kategorie" value="11" required="required">Ethik allgemein<br><br>
         </span>
-        <center>
       <input type="submit" class='index-link-btn' value="Submit">
       </center>
     </form>

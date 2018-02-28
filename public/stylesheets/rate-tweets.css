@@ -17,9 +17,10 @@ body {
 }
 
 #index-logo {
-    width: 30vw;
+    width: 20vw;
     height: auto;
 }
+
 
 .index-buttons {
     margin-top: 2em;
@@ -43,10 +44,12 @@ body {
 
 #handle{
     color: steelblue;
+    font-size: large;
+    font-family: "Dubai Light";
 }
 
 #content{
-    display: block;
-    margin: 2em;
-    text-align: justify
+    text-align: justify;
+    width: 50%;
+    font-size: medium;
 }
