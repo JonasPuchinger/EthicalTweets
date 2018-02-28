@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/pre-rate-tweets.css' />
+</head>
+<body>
+<img src='/images/logo.svg' alt='Logo' id='index-logo'>
+<h1><%= title %></h1>
+<p>Vielen Danke für die Teilnahme an einer subjektiven Validierung von Tweets hinsichtlich der moralischen Intuition des Autors.<br>
+Im Folgenden sind mehrer Tweets zu sehen die verschiedenen Kategorien zuzuordnen sind.<br>
+Geben Sie bitte erst Ihre demographischen Daten an und bestätigen Sie diese.<br></p>
+<form action="pre-rate-tweets/insert" method="post">
+    <input class="search-form" name="age" type="number" min="10" max="100" placeholder="Alter" required="required"><br>
+    <input id="formgender" type="radio" name="gender" value="male" required="required">	&#9794;
+    <input id="formgender" type="radio" name="gender" value="female" required="required"> &#9792;<br>
+    <input  class="search-form" name="work" type="text" placeholder="Beruf" required="required"><br>
+    <input name="ethics" type="range" min="0" max="6" steps="1"><br>0 Ethisches Wissen 6<br>
+    <div class='index-buttons'>
+        <center>
+    <input type="submit"  class='index-link-btn' value="Bestätigen">
+        </center>
+    </div>
+</form>
+
+</body>
+</html>
