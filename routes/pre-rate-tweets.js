@@ -42,7 +42,7 @@ router.post('/insert', function(req, res, next){
         age: req.body.age,
         gender: req.body.gender,
         work: req.body.work,
-        ethics: req.body.ethics
+        email: req.body.email
     };
 
     mongo.connect(url, function (err, client) {
