@@ -2,15 +2,15 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/rate-tweets.css' />
+    <link rel='stylesheet' href='/stylesheets/rate-keywords.css' />
   </head>
   <body>
   <img src='/images/logo.svg' alt='Logo' id='index-logo'>
     <h1><%= title %></h1>
-    <p id="handle">@<%= namehtml %> schrieb am <%= datehtml %>:</p>
+    <p id="content">Bitte ordnen Sie dem folgenden Wort eine Kategorie zu (* bedeutet beliebige Endung):</p>
     <p id="content"><%= contenthtml %></p>
   <center>
-    <form action="rate-tweets/insert" method="post">
+    <form action="rate-keywords/insert" method="post">
       <span style="background-color:lightgreen">
       <input id="kategorie" type="radio" name="kategorie" value="1" required="required">Schutz
       <input id="kategorie" type="radio" name="kategorie" value="3" required="required">Gerechtigkeit

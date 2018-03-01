@@ -10,13 +10,13 @@ var item={};
 
 
 
-var start ="START";
+
 
 router.get('/', function(req, res, next) {
 
 
 
-  uid = req.cookies.uid;
+    uid = req.cookies.uid;
 
 
     mongo.connect(url, function(err, client) {
@@ -48,18 +48,14 @@ router.get('/', function(req, res, next) {
 
         console.log("values in cookies");
 
-        res.render('rate-tweets', { title: 'Ethical Tweets', contenthtml:currtweet.content, namehtml:currtweet.handle,
-            datehtml:currtweet.date,starthtml:start});
+        res.render('rate-keywords', { title: 'Ethical Tweets', contenthtml:currtweet.word});
     }
 
 
 
 });
 
-router.get('/get-tweet', function(req, res, next) {
 
-
-});
 
 router.post('/insert', function(req, res, next){
 
@@ -80,17 +76,16 @@ router.post('/insert', function(req, res, next){
     mongo.connect(url, function (err, client) {
         assert.equal(null, err);
         var db = client.db('users');
-        db.collection('result').insertOne(item, function (err, result) {
+        db.collection('resultkeywords').insertOne(item, function (err, result) {
             assert.equal(null, err);
             console.log('result data inserted');
             client.close();
         });
     });
     if(req.cookies.counter=="11111111111111"){
-        res.cookie("counter",0);
-        res.redirect('/rate-keywords');
+        res.redirect('/');
     }
-    res.redirect('/rate-tweets');
+    res.redirect('/rate-keywords');
     console.log("get tweet");
 });
 

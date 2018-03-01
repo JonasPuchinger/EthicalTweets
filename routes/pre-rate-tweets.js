@@ -10,9 +10,10 @@ var shortid = require('shortid');
 
 var url = 'mongodb://infophil:ethtweets8897@ethicaltweets-shard-00-00-nzg80.mongodb.net:27017,ethicaltweets-shard-00-01-nzg80.mongodb.net:27017,ethicaltweets-shard-00-02-nzg80.mongodb.net:27017/test?ssl=true&replicaSet=ethicaltweets-shard-0&authSource=admin';
 
-var userId = shortid.generate();
+var userId;
 
 router.get('/', function(req, res, next) {
+    userId = shortid.generate();
     res.cookie('uid',userId);
     res.render('pre-rate-tweets', { title: 'Ethical Tweets' });
 
@@ -36,6 +37,8 @@ router.get('/get-data', function(req, res, next) {
 });
 
 router.post('/insert', function(req, res, next){
+
+    res.cookie("counter",0);
 
     var item = {
         userid: userId,
