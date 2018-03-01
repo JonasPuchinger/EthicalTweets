@@ -63,9 +63,11 @@ router.get('/get-tweet', function(req, res, next) {
 
 router.post('/insert', function(req, res, next){
 
+
     uid = req.cookies.uid;
     var locount = parseInt(req.cookies.counter+1);
     res.cookie("counter",locount);
+
 
     item = {
         word: req.cookies.wordc,
