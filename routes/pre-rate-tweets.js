@@ -38,6 +38,8 @@ router.get('/get-data', function(req, res, next) {
 
 router.post('/insert', function(req, res, next){
 
+    res.cookie("counter",0);
+
     var item = {
         userid: userId,
         age: req.body.age,

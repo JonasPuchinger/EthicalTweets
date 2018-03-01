@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Lucida Console';
+    src: url('../fonts/Lucida-Console.ttf') format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font: 14px "Lucida Console", Helvetica, Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#index-logo {
+    width: 20vw;
+    height: auto;
+}
+
+
+.index-buttons {
+    margin-top: 2em;
+}
+
+.index-link-btn {
+    padding: 1em;
+    width: 10em;
+    border: 1px solid #000000;
+    border-radius: 0.5em;
+    color: #000000;
+    margin: 2em;
+    text-decoration: none;
+    outline: none;
+}
+
+.index-link-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#handle{
+    color: steelblue;
+    font-size: large;
+    font-family: "Dubai Light";
+}
+
+#content{
+    text-align: center;
+    width: 50%;
+    font-size: x-large;
+    font-family: "Dubai Light";
+}

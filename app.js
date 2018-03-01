@@ -10,6 +10,7 @@ var index = require('./routes/index');
 var rateTweets = require('./routes/rate-tweets');
 var results = require('./routes/results');
 var preRateTweets = require('./routes/pre-rate-tweets');
+var rateKeywords = require('./routes/rate-keywords');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use('/', index);
 app.use('/rate-tweets', rateTweets);
 app.use('/pre-rate-tweets', preRateTweets);
 app.use('/results', results);
+app.use('/rate-keywords', rateKeywords);
 
 // Error Handling
 app.use(function(req, res, next) {
