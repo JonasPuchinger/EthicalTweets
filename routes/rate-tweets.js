@@ -57,7 +57,9 @@ router.get('/get-tweet', function(req, res, next) {
 });
 
 router.post('/insert', function(req, res, next){
-
+    
+    uid = req.cookies.uid;
+  
     item = {
         word: req.cookies.wordc,
         suppcategory0: parseInt(req.cookies.suppcategory0),
