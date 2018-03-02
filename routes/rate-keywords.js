@@ -82,7 +82,7 @@ router.post('/insert', function(req, res, next){
             client.close();
         });
     });
-    if(req.cookies.counter=="11111111111111"){
+    if(req.cookies.counter=="111111111"){
         res.redirect('/');
     }
     res.redirect('/rate-keywords');
