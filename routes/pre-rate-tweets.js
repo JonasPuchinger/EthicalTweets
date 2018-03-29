@@ -13,7 +13,9 @@ var url = 'mongodb://infophil:ethtweets8897@ethicaltweets-shard-00-00-nzg80.mong
 var userId;
 
 router.get('/', function(req, res, next) {
+    //create unique id to identify user
     userId = shortid.generate();
+    //set cookie with userid
     res.cookie('uid',userId);
     res.render('pre-rate-tweets', { title: 'Ethical Tweets' });
 
@@ -37,9 +39,9 @@ router.get('/get-data', function(req, res, next) {
 });
 
 router.post('/insert', function(req, res, next){
-
+    //setting counter, needed for next pages
     res.cookie("counter",0);
-
+    //creating object with users data
     var item = {
         userid: userId,
         age: req.body.age,
@@ -47,16 +49,19 @@ router.post('/insert', function(req, res, next){
         work: req.body.work,
         email: req.body.email
     };
-
+    //connecting
     mongo.connect(url, function (err, client) {
+    //catch db error
     assert.equal(null, err);
     var db = client.db('users');
+    //inserting item in db
     db.collection('users').insertOne(item, function (err, result) {
         assert.equal(null, err);
         console.log('data inserted');
         client.close();
     });
     });
+    //redirecting to next page
     res.redirect('/rate-tweets');
 });
 
