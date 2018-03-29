@@ -8,7 +8,7 @@ var url = 'mongodb://infophil:ethtweets8897@ethicaltweets-shard-00-00-nzg80.mong
 var currtweet={};
 var item={};
 
-
+//same procedure as rate-tweets.js
 
 
 
