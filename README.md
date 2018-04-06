@@ -11,7 +11,7 @@ Identifier | Name | Translation
 04 | FairnessVice | Ungerechtigkeit
 05 | IngroupVirtue | Zugehörigkeit
 06 | IngroupVice | Ausgrenzung
-07 | AuthorityVirtue | Gehprsamkeit  
+07 | AuthorityVirtue | Gehorsamkeit  
 08 | AuthorityVice | Protest
 09 | PurityVirtue | Tugendhaftigkeit
 10 | PurityVice | Verdorbenheit
